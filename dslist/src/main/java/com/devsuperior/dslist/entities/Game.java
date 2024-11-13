@@ -25,7 +25,10 @@ public class Game {
     private String platform;
     private Double score;
     private String imgUrl;
+
+    @Column(columnDefinition= "TEXT")
     private String shortDescription;
+    @Column(columnDefinition= "TEXT")
     private String longDescription;
 
     public Game (Long id, Integer year, String title, String genre, String platform, Double score,
@@ -119,7 +122,7 @@ public class Game {
     public void setLongDescription() {
         this.longDescription = longDescription;
     }
-    
+
 
     @Override
     public int hashCode() {
