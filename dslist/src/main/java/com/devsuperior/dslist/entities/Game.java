@@ -31,12 +31,16 @@ public class Game {
     @Column(columnDefinition= "TEXT")
     private String longDescription;
 
-    public Game (Long id, Integer year, String title, String genre, String platform, Double score,
+    public Game() {
+
+    }
+
+    public Game (Long id, String title, Integer year, String genre, String platform, Double score,
                 String imgUrl, String shortDescription, String longDescription) {
 
         this.id = id;
-        this.year = year;
         this.title = title;
+        this.year = year;
         this.genre = genre;
         this.platform = platform;
         this.score = score;
